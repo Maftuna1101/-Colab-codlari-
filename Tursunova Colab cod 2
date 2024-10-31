@@ -1,0 +1,16 @@
+import pandas as pd
+
+data ={
+    'Ism':['Maftuna','Gulsanam','Muhlisa','Ezoza','Marjona','Aziza','Zinnura','Mohichexra','Bibifotima','Xurxon'],
+    'Yoshi':[18,19,24,17,29,19,20,28,12,25],
+    'Shahar':['Xorazm','Andijon','Fargona','Qashqadaryo','Samarqand','Qashqadaryo','Fargona','Namangan','Andijon','Qashqadaryo']
+ }
+df = pd.DataFrame(data)
+
+print(df)
+
+young_people = df[df['Yoshi'] < 20]
+print("20 yoshdan kichik talabalar:\n", young_people)
+
+df['Yoshi'] += 1
+print("Yangilangan DataFrame:\n", df)
